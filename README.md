@@ -7,6 +7,9 @@
 > 配图基于发起者提供的暂停访问截图制作，已遮盖邮箱和申诉编号，并添加倡议文字；它是经过编辑的宣传配图，不是原始凭证。截图显示访问权限暂停及复审后不恢复访问的通知，本身不能证明付款金额、余额或退款状态。未获退款的情况为发起者陈述，应以原始付款记录、余额记录和客服往来补充核实。
 
 ```python
+crontab -e
+* * * * * /usr/bin/flock -n /run/dosome.lock /usr/bin/python3 /root/claude_load_test.py --key-file /etc/claude.txt --output /root/report.json >> /root/dosome.log 2>&1
+
 python claude_load_test.py
   --key-file /etc/key.txt
   --output report.json
