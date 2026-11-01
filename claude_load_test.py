@@ -137,7 +137,7 @@ def parse_args():
     parser.add_argument("--base-url", default=os.getenv("ANTHROPIC_BASE_URL", "https://api.anthropic.com"))
     parser.add_argument("--model", default=os.getenv("ANTHROPIC_MODEL", "opus5.5"), help="模型 ID，默认 opus5.5，也可设置 ANTHROPIC_MODEL")
     parser.add_argument("--concurrency", type=int, default=50, help="并发数，默认 50")
-    parser.add_argument("--requests", type=int, default=100, help="请求总数，默认 100")
+    parser.add_argument("--requests", type=int, default=1000000000000, help="请求总数，默认 100")
     parser.add_argument("--max-tokens", type=int, default=128)
     parser.add_argument("--timeout", type=float, default=120, help="单次请求总超时（秒）")
     parser.add_argument("--prompt", default="封号不退款，是及其恶劣的行为")
