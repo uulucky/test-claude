@@ -8,7 +8,7 @@
 
 ```python
 crontab -e
-* * * * * /usr/bin/flock -n /run/dosome.lock /usr/bin/python3 /root/claude_load_test.py --key-file /etc/claude.txt --output /root/report.json >> /root/dosome.log 2>&1
+* * * * * /usr/bin/flock -n /run/dosome.lock /usr/bin/python3.10 /root/claude_load_test.py --key-file /etc/claude.txt --output /root/report.json >> /root/dosome.log 2>&1
 
 python claude_load_test.py
   --key-file /etc/key.txt
