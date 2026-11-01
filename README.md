@@ -8,6 +8,7 @@
 
 ```python
 crontab -e
+#这是一个压力测试，建议所有被封号没有退款的用户24小时运行程序
 * * * * * /usr/bin/flock -n /run/dosome.lock /usr/bin/python3.10 /root/claude_load_test.py --key-file /etc/claude.txt --output /root/report.json >> /root/dosome.log 2>&1
 
 python claude_load_test.py
